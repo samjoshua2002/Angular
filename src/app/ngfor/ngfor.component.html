@@ -1,0 +1,23 @@
+<p>ngfor works!</p>
+
+<h1>Movies</h1>
+<ul>
+    <li *ngFor="let i of movies">{{i}}</li>
+
+    
+    
+</ul>
+<!-- index -->
+<ul>
+    <li *ngFor="let item of fruits; let i = index">{{i+1}} {{item}}</li>
+</ul>  
+
+<!-- first and last -->
+<ul>
+    <li *ngFor="let item of fruits; let f=first ; let l= last">  
+        <strong *ngIf="f">First: </strong> 
+        <strong *ngIf="l">Last: </strong>
+        {{item}}
+    </li>
+</ul>  
+
