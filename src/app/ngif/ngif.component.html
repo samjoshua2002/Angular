@@ -1,12 +1,17 @@
 <hr>
-<b><h1>ngif</h1></b>
+<b><h1>ngIf Example</h1></b>
 
+<!-- Static ngIf examples -->
+<p *ngIf="false">You can't see this</p>
+<p *ngIf="true">Can you see this?</p>
 
-<p *ngIf="false"> you cant see this</p>
-<p *ngIf="true">can you see this</p>
-
-<p *ngIf=T> Works with button</p>
+<!-- Button toggle example -->
+<p *ngIf="T">Works with button</p>
 <button (click)="toggleT()">Click me</button>
 
+<hr>
 
-
+<!-- Checkbox toggle example -->
+<p>Another Example using Checkbox</p>
+<input type="checkbox" [(ngModel)]="show">
+<p *ngIf="show">Checkbox toggles me!</p>

@@ -6,11 +6,12 @@ import { NGFORComponent } from './ngfor/ngfor.component';
 import { ImageurlComponent } from './imageurl/imageurl.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { NgifComponent } from './ngif/ngif.component';
+import { NgclassComponent } from './ngclass/ngclass.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CounterComponent,NGFORComponent, ImageurlComponent,TwowaybindingComponent , NgifComponent],
+  imports: [CounterComponent,NGFORComponent, ImageurlComponent,TwowaybindingComponent , NgifComponent,NgclassComponent],
   templateUrl: './app.component.html',
   // Alternatively, use inline template:
   // template: "<h1>Hello World</h1>",

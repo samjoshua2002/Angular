@@ -1,0 +1,9 @@
+<hr>
+<h1><b>NGCLASS</b></h1>
+
+<!-- Apply a single class -->
+<p [ngClass]="'primary'">Sample text with a single CSS class applied</p>
+
+<!-- Conditionally apply a class -->
+<p [ngClass]="{'primary': isPrimary}">Conditional class application</p>
+<button (click)="togglePrimary()">Toggle Class</button>
