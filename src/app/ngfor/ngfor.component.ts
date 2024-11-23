@@ -23,7 +23,9 @@ export class NGFORComponent {
     'apple',
     'banana',
     'cherry',
-    'pineapple'
+    'pineapple',
+    'watermelon',
+    'orange'
   ]
 
 }

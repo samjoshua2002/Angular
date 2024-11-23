@@ -1,4 +1,5 @@
-<p>ngfor works!</p>
+<hr>
+<b><h1>ngfor</h1></b>
 
 <h1>Movies</h1>
 <ul>
@@ -20,4 +21,17 @@
         {{item}}
     </li>
 </ul>  
+
+
+<!-- even odd -->
+<ul>
+    <li 
+      *ngFor="let item of fruits; let e = even; let o = odd" 
+      [ngClass]="{ 'even-item': e, 'odd-item': o }">
+      <strong *ngIf="e">even: </strong>
+      <strong *ngIf="o">odd: </strong>
+      {{item}}
+    </li>
+  </ul>
+  
 

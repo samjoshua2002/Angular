@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+
 import { CounterComponent } from './counter/counter.component';
-import { CommonModule } from '@angular/common';
+
 import { NGFORComponent } from './ngfor/ngfor.component';
 import { ImageurlComponent } from './imageurl/imageurl.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
+import { NgifComponent } from './ngif/ngif.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CounterComponent,NGFORComponent, ImageurlComponent,TwowaybindingComponent],
+  imports: [CounterComponent,NGFORComponent, ImageurlComponent,TwowaybindingComponent , NgifComponent],
   templateUrl: './app.component.html',
   // Alternatively, use inline template:
   // template: "<h1>Hello World</h1>",
