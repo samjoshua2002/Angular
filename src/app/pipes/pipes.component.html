@@ -1,0 +1,32 @@
+<hr class="my-4 border-gray-300" />
+<h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Pipes</h1>
+
+<div class="p-4 bg-gray-100 rounded-lg shadow-md">
+    <!-- Date Pipes -->
+    <h2 class="text-xl font-semibold text-gray-700 mb-4">Date Formatting</h2>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Unformatted date:</span> {{ date }}</p>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Formatted date:</span> {{ date | date }}</p>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Medium date:</span> {{ date | date:'medium' }}</p>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Short date:</span> {{ date | date:'short' }}</p>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Full date:</span> {{ date | date:'fullDate' }}</p>
+    <p class="text-gray-600 mb-4"><span class="font-medium">Long date:</span> {{ date | date:'longDate' }}</p>
+
+    <!-- Slice Pipe -->
+    <h2 class="text-xl font-semibold text-gray-700 mb-4">Slice Pipe</h2>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Default text:</span> {{ title }}</p>
+    <p class="text-gray-600 mb-4"><span class="font-medium">Sliced text:</span> {{ title | slice:0:5 }}</p>
+
+    <ul class="list-disc list-inside text-gray-600 mb-4">
+        <li *ngFor="let item of i | slice:0:3">{{ item }}</li>
+    </ul>
+
+    <!-- Uppercase and Lowercase -->
+    <h2 class="text-xl font-semibold text-gray-700 mb-4">Case Conversion</h2>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Uppercase to lowercase:</span> {{ uppercase | lowercase }}</p>
+    <p class="text-gray-600 mb-4"><span class="font-medium">Lowercase to uppercase:</span> {{ lowercase | uppercase }}</p>
+
+    <!-- Currency Conversion -->
+    <h2 class="text-xl font-semibold text-gray-700 mb-4">Currency Conversion</h2>
+    <p class="text-gray-600 mb-2"><span class="font-medium">Default currency:</span> {{ money | currency }}</p>
+    <p class="text-gray-600"><span class="font-medium">Indian currency:</span> {{ money | currency:'INR' }}</p>
+</div>

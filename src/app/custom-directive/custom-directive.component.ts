@@ -8,5 +8,6 @@ import { HighlightDirective } from '../highlight.directive';
   styleUrl: './custom-directive.component.css'
 })
 export class CustomDirectiveComponent {
+ 
 
 }

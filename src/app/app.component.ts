@@ -8,21 +8,23 @@ import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component'
 import { NgifComponent } from './ngif/ngif.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { FormComponent } from './form/form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CounterComponent,NGFORComponent, ImageurlComponent,TwowaybindingComponent , NgifComponent,NgclassComponent,CustomDirectiveComponent],
+  imports: [CounterComponent, NGFORComponent, FormComponent, ImageurlComponent, TwowaybindingComponent, PipesComponent, NgifComponent, NgclassComponent, CustomDirectiveComponent],
   templateUrl: './app.component.html',
   // Alternatively, use inline template:
   // template: "<h1>Hello World</h1>",
   styleUrls: ['./app.component.css'] // Corrected `styleUrl` to `styleUrls` and made it an array
 })
 export class AppComponent implements OnInit {
-  
+
   fullName: string = "Sam Joshua";
   title: string = "demo";
-  
+
 
   user = {
     name: "Sanjay",
@@ -39,8 +41,8 @@ export class AppComponent implements OnInit {
   getName() {
     return "Barnabas";
   }
-  
 
- 
-  
+
+
+
 }

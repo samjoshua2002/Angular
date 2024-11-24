@@ -8,14 +8,14 @@ export class HighlightDirective {
   @Input() highlightTextColor = ''; // Text color during highlight
   @Input() defaultTextColor = ''; // Default text color
   @Input() highlightFontSize = ''; // Font size during highlight
-  @Input() highlightBorder = ''; // Border style during highlight
-  @Input() shadowEffect = false; // Shadow effect toggle
+  @Input() highlightBorder = '';
+  @Input() shadowEffect = false; 
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('mouseenter') onMouseEnter() {
     this.setStyles({
-      backgroundColor: this.appHighlight || 'yellow',
+      backgroundColor: this.appHighlight || 'grey',
       color: this.highlightTextColor || 'black',
       fontSize: this.highlightFontSize || 'inherit',
       border: this.highlightBorder || 'none',
