@@ -6,4 +6,18 @@
 
 <!-- Conditionally apply a class -->
 <p [ngClass]="{'primary': isPrimary}">Conditional class application</p>
+
+<!-- Toggle class dynamically -->
 <button (click)="togglePrimary()">Toggle Class</button>
+<br>
+
+<!-- Practice example -->
+<ul [ngClass]="'display'">
+  <li>
+    <input type="checkbox" [(ngModel)]="checkbox">
+    <p [ngClass]="{'big': checkbox}">Apply red color</p>
+  </li>
+</ul>
+
+<!-- to apply direct styling -->
+ <p [ngStyle]="{'color':'red','font-size':'40px'}">DIRECT INLINE STYLING</p>

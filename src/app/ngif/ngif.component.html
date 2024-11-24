@@ -8,10 +8,17 @@
 <!-- Button toggle example -->
 <p *ngIf="T">Works with button</p>
 <button (click)="toggleT()">Click me</button>
+<br>
+<br>
 
-<hr>
 
 <!-- Checkbox toggle example -->
 <p>Another Example using Checkbox</p>
-<input type="checkbox" [(ngModel)]="show">
+
+<ul>
+    <li>
+        <input type="checkbox" [(ngModel)]="show">
 <p *ngIf="show">Checkbox toggles me!</p>
+    </li>
+</ul>
+
