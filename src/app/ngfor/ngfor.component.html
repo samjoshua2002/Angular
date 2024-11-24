@@ -1,37 +1,44 @@
-<hr>
-<b><h1>ngfor</h1></b>
-
-<h1>Movies</h1>
-<ul>
-    <li *ngFor="let i of movies">{{i}}</li>
-
+<hr class="my-4 border-gray-300" />
+<h1 class="text-2xl font-bold text-center text-gray-800 mb-6">NGFOR</h1>
+<div class="p-6 bg-gray-100 rounded-lg shadow-md">
     
-    
-</ul>
-<!-- index -->
-<ul>
-    <li *ngFor="let item of fruits; let i = index">{{i+1}} {{item}}</li>
-</ul>  
 
-<!-- first and last -->
-<ul>
-    <li *ngFor="let item of fruits; let f=first ; let l= last">  
-        <strong *ngIf="f">First: </strong> 
-        <strong *ngIf="l">Last: </strong>
-        {{item}}
-    </li>
-</ul>  
+    <!-- Movies List -->
+    <h2 class="text-xl font-semibold text-blue-600 mb-4">Movies</h2>
+    <ul class="list-disc list-inside text-gray-700 mb-6">
+        <li *ngFor="let i of movies">{{ i }}</li>
+    </ul>
 
+    <!-- Index Example -->
+    <h2 class="text-xl font-semibold text-blue-600 mb-4">Indexed Fruits List</h2>
+    <ul class="list-disc list-inside text-gray-700 mb-6">
+        <li *ngFor="let item of fruits; let i = index">{{i + 1}} - {{ item }}</li>
+    </ul>
 
-<!-- even odd -->
-<ul>
-    <li 
-      *ngFor="let item of fruits; let e = even; let o = odd" 
-      [ngClass]="{ 'even-item': e, 'odd-item': o }">
-      <strong *ngIf="e">even: </strong>
-      <strong *ngIf="o">odd: </strong>
-      {{item}}
-    </li>
-  </ul>
-  
+    <!-- First and Last Example -->
+    <h2 class="text-xl font-semibold text-blue-600 mb-4">First and Last</h2>
+    <ul class="list-none text-gray-700 mb-6">
+        <li
+            *ngFor="let item of fruits; let f = first; let l = last"
+            class="mb-2"
+        >
+            <span class="text-green-500 font-bold" *ngIf="f">First: </span>
+            <span class="text-red-500 font-bold" *ngIf="l">Last: </span>
+            {{ item }}
+        </li>
+    </ul>
 
+    <!-- Even and Odd Example -->
+    <h2 class="text-xl font-semibold text-blue-600 mb-4">Even and Odd</h2>
+    <ul class="list-none text-gray-700">
+        <li
+            *ngFor="let item of fruits; let e = even; let o = odd"
+            [ngClass]="{ 'bg-gray-200': e, 'bg-gray-100': o }"
+            class="py-2 px-4 rounded-md mb-2"
+        >
+            <span class="text-purple-500 font-bold" *ngIf="e">Even: </span>
+            <span class="text-orange-500 font-bold" *ngIf="o">Odd: </span>
+            {{ item }}
+        </li>
+    </ul>
+</div>

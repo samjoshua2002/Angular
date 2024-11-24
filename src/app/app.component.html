@@ -1,28 +1,72 @@
-<app-pipes></app-pipes>
-<app-form></app-form>
+<div class=" mx-auto p-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Pipes Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-pipes></app-pipes>
+    </div>
+        <!-- ngFor Component -->
+        <div class="bg-white shadow-lg rounded-lg p-4">
+            <app-ngfor></app-ngfor>
+          </div>
 
 
-<app-counter ></app-counter>
+    
+        <!-- Form Component -->
+        <div class="bg-white shadow-lg rounded-lg p-4">
+          <app-form (carAdded)="onCarAdded($event)"></app-form>
+        </div>
+      
+        <!-- Result Component -->
+        <div class="bg-white shadow-lg rounded-lg p-4">
+          <app-result [carNames]="carNames"></app-result>
+        </div>
+      
+      
+
+    <!-- Counter Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-counter></app-counter>
+    </div>
+
+    <!-- Image URL Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-imageurl></app-imageurl>
+    </div>
 
 
-<!-- imageurl -->
- <app-imageurl></app-imageurl>
 
-<!-- NGFOR -->
- <app-ngfor ></app-ngfor>
+    <!-- Two Way Binding Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-twowaybinding></app-twowaybinding>
+    </div>
 
+    <!-- ngIf Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-ngif></app-ngif>
+    </div>
 
-<!-- two waybinding -->
- <app-twowaybinding></app-twowaybinding>
-<!-- ngif  -->
- <app-ngif></app-ngif>
+    <!-- ngClass Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-ngclass></app-ngclass>
+    </div>
 
- <app-ngclass></app-ngclass>
- <app-custom-directive></app-custom-directive>
+    <!-- Custom Directive Component -->
+    <div class="bg-white shadow-lg rounded-lg p-4">
+      <app-custom-directive></app-custom-directive>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg p-4">
+        <hr class="my-4 border-gray-300" />
+<h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Single Way Binding</h1>
+<div class="mt-6">
+    <h1 class="text-2xl font-semibold">{{getName()}}</h1>
+    <p class="text-gray-700" [textContent]="user.name"></p>
+    <p class="text-gray-700" [textContent]="status?.current"></p>
+  </div>
+       
+      </div>
 
- <!-- day 1 -->
+  </div>
 
-<h1>{{getName()}}</h1>
-
-<p [textContent]="user.name"></p>
-<p [textContent]="status?.current"></p>
+  
+</div>

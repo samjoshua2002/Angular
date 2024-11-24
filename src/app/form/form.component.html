@@ -1,18 +1,20 @@
 <hr class="my-4 border-gray-300" />
-<h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Forms</h1>
-
-<form class="border border-gray-300 p-5 rounded-lg">
-    <label for="car" class="block mb-2 font-medium text-gray-700">Car</label>
-    <input
+<h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Car Form</h1>
+<form (ngSubmit)="onSubmit()" class="space-y-4">
+    <div class="flex items-center space-x-4">
+      <input
         type="text"
-        name="car"
-        id="car"
-        class="w-full p-2 mb-4 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-    />
-    <button
+        [(ngModel)]="carName"
+        name="carName"
+        placeholder="Enter car name"
+        class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+      <button
         type="submit"
-        class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-all duration-300"
-    >
-        Submit
-    </button>
-</form>
+        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+      >
+        Add Car
+      </button>
+    </div>
+  </form>
+  
